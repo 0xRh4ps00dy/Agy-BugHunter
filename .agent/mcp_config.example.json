@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "hackerone": {
+      "command": "python",
+      "args": ["mcp/hackerone/server.py"],
+      "env": {
+        "HACKERONE_API_USERNAME": "",
+        "HACKERONE_API_TOKEN": ""
+      }
+    }
+  }
+}

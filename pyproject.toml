@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agy-bughunter"
+version = "2.1.0"
+description = "agy-bh & cbh — Google Antigravity security-assessment harness and CLI"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["security", "bug-bounty", "recon", "antigravity", "pentest"]
+dependencies = []
+
+[project.optional-dependencies]
+# `requests` is optional — cbh falls back to urllib when it's absent.
+http = ["requests"]
+
+[project.scripts]
+cbh = "cbh.cli:main"
+agy-bh = "cbh.agy_cli:main"
+abh = "cbh.agy_cli:main"
+
+[tool.setuptools]
+packages = ["cbh"]
+
+[tool.setuptools.package-data]
+cbh = ["data/*.json"]
